@@ -11,7 +11,7 @@ Ibili 是 BilibiliPlus 的接棒项目——原项目已暂停服务，全部能
 | 首次启动选语言 | 美化后的首页 |
 |---|---|
 | ![首次启动的语言选择](docs/preview-1-language.png) | ![美化后的首页](docs/preview-2-home.png) |
-| **设置 · 语言和字体** | **深色界面** |
+| **设置 · 语言和字体** | **聚焦搜索** |
 | ![设置页的语言和字体](docs/preview-3-settings.png) | ![深色界面](docs/preview-4-dark.png) |
 
 ---
