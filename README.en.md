@@ -6,7 +6,7 @@
 
 **[← 中文](README.md)**　·　English　·　by **Xi/ElioXBlaze**　·　QQ group **1134860332**
 
-**Current version 4.0.6** · MIT License · single-file userscript
+**Current version 4.0.7** · MIT License · single-file userscript
 
 </div>
 
@@ -178,6 +178,7 @@ The hard parts were all iPad Safari specifics:
 
 Full history: [Releases](https://github.com/ElioXBlaze/Ibili/releases). 3.x covered the merge, settings integration, languages, touch and on-device structural fixes; 4.0 swapped the core to BewlyCat. Highlights:
 
+- **4.0.7** — unified version source of truth: every version readout now derives from a single `__IBILI_VER__` (one line per release; display, bookkeeping and backups sync automatically); the version-reminder dialog drops its Release-style layout and centers all elements; the help bar is removed — backup/restore lives only on the About page.
 - **4.0.6** — official release (three batches of verifiable fixes folded in): Stay menu registration root-fixed, export auto-enumerates all storage keys, autoplay gesture finalized, About-page donation images restored.
 - **4.0.5** — settings-page UI stacking root-fixed: nine legacy injection functions short-circuit when V5 is active; bewlycat leftover settings entries and the duplicate bottom-right icon removed; one search box in the settings window with results on real IA paths; 14 secondary pages forced visible, breadcrumbs unified to "Level › Sub-level"; center gesture HUD removed, only left-brightness / right-volume bars remain; the "Engineering" settings page deleted, entries live only in the Stay userscript menu.
 - **4.0.0** — **core swap**: UI runtime switched to a single-file iPadOS Safari transpilation of BewlyCat 1.8.5, replacing BewlyBewly v0.41.1; settings rebuilt as a three-level IA (7 top categories / second level on the native sidebar / centered "Find settings" box); UI languages expanded from 9 to 11 (Korean, Thai, Vietnamese, Indonesian added).
