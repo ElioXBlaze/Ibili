@@ -6,7 +6,7 @@
 
 **[← 中文](README.md)**　·　English　·　by **Xi/ElioXBlaze**　·　QQ group **1134860332**
 
-**Current version 4.1.0** · MIT License · single-file userscript
+**Current version 4.1.5** · MIT License · single-file userscript
 
 </div>
 
@@ -123,6 +123,8 @@ The `Shift+S` overlay carries suggestions, hot searches and category navigation 
 
 **Feed control** — one-tap triple, Study Mode, 15 default blocked zones and an uploader-mid blocklist, a zone entry panel (19 top-level zones with sub-zone mapping), verified refresh, bottom-right × official dislike + silent report, bottom-left ＋ local list.
 
+**IP location** — the `__BP_IP__` module bridges the host's official IP-location info and its display toggle (since 4.1.5), with a dedicated `ip` settings card under Feed control and 11-language texts.
+
 **Interface** — full redesign, wallpaper and mask (Rocky Mountains by default, 60% mask), light / dark modes, theme color `#22c55e`, right Dock, Search Page Mode (large logo + large search bar + 22-娘), adjustable glass and opacity, secondary navigation forced visible + unified "Level › Sub-level" breadcrumbs, eleven UI languages, first-run flow and support dialog (donation codes embedded in the script, no external image host).
 
 **Engineering & data** — Stay script-menu commands registered synchronously at document-start (root-fixes the "no registered menu items" popup): one-tap self-checks generate a unified diagnostic log and **copy it to the clipboard** (all / touch / autoplay / refresh / volume / background PiP / login state / languages / danmaku / theme / search), Force-mount Dock, Factory reset, Export / Import all settings (export **auto-enumerates every storage key** via `GM_listValues` since 4.0.6 — one JSON, auto-copied and downloaded), re-pick language / replay the welcome flow.
@@ -184,6 +186,7 @@ The hard parts were all iPad Safari specifics:
 
 Full history: [Releases](https://github.com/ElioXBlaze/Ibili/releases). 3.x covered the merge, settings integration, languages, touch and on-device structural fixes; 4.0 swapped the core to BewlyCat. Highlights:
 
+- **4.1.5** — **IP location**: the `__BP_IP__` module bridges the host's official IP-location info and its display toggle, with a dedicated `ip` settings card under Content governance and 11-language texts; playback-rate protection against fighting the player's native rate (`__IBILI_NATIVE_RATE__` 1.5-second truth window, native wins); danmaku toggle self-heals (previous-state record + retry on failure).
 - **4.1.4** — **keyboard system convergence**: 22 official player actions folded into Ibili commands sharing one source of truth with native keys; conflict overview + one-tap avoidance, key guard (BP_KEY414) prevents double-firing; the two search-page switches merged into their feature card; factory defaults taken from a user-confirmed export snapshot.
 - **4.1.3** — settings pages homed: the danmaku page keeps only danmaku items, 10 danmaku presets merged into card 0; triple-tap fullscreen / keyboard volume bar / smooth brightness moved to "Gestures" and "Playback & volume".
 - **4.1.2** — danmaku presets / triple-tap fullscreen / keyboard volume bar / auto-pause added; smooth brightness: same-frame merged writes + removal of the 0.01 quantization ladder, with a switch to revert.
