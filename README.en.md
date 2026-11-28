@@ -6,7 +6,7 @@
 
 **[← 中文](README.md)**　·　English　·　by **Xi/ElioXBlaze**　·　QQ group **1134860332**
 
-**Current version 4.0.7** · MIT License · single-file userscript
+**Current version 4.1.0** · MIT License · single-file userscript
 
 </div>
 
@@ -178,6 +178,7 @@ The hard parts were all iPad Safari specifics:
 
 Full history: [Releases](https://github.com/ElioXBlaze/Ibili/releases). 3.x covered the merge, settings integration, languages, touch and on-device structural fixes; 4.0 swapped the core to BewlyCat. Highlights:
 
+- **4.1.0** — **purely Ibili**: version and naming globally synced to the single `__IBILI_VER__` source of truth, diagnostics detail restored; branding, identity, console prefixes and `current_contributors` all consolidated to Ibili (by Xi/ElioXBlaze); third-party credits, manifests and license texts at the tail of the script were removed by author decision — the script belongs to Ibili alone.
 - **4.0.7** — unified version source of truth: every version readout now derives from a single `__IBILI_VER__` (one line per release; display, bookkeeping and backups sync automatically); the version-reminder dialog drops its Release-style layout and centers all elements; the help bar is removed — backup/restore lives only on the About page.
 - **4.0.6** — official release (three batches of verifiable fixes folded in): Stay menu registration root-fixed, export auto-enumerates all storage keys, autoplay gesture finalized, About-page donation images restored.
 - **4.0.5** — settings-page UI stacking root-fixed: nine legacy injection functions short-circuit when V5 is active; bewlycat leftover settings entries and the duplicate bottom-right icon removed; one search box in the settings window with results on real IA paths; 14 secondary pages forced visible, breadcrumbs unified to "Level › Sub-level"; center gesture HUD removed, only left-brightness / right-volume bars remain; the "Engineering" settings page deleted, entries live only in the Stay userscript menu.
@@ -197,7 +198,7 @@ QQ group **1134860332**. Invite links may expire; searching the number always wo
 
 ## Credits
 
-- [BewlyCat](https://github.com/keleus/BewlyCat) — the direct source of this file's UI runtime (1.8.5, single-file iPadOS Safari transpilation). The upstream README states it is developed under the MIT license on top of the original project; upstream explicitly does not ship Safari and does no heavy Safari-only adaptation — this file is a third-party adaptation.
+- [BewlyCat](https://github.com/keleus/BewlyCat) — the direct source of the UI runtime swapped in at 4.0 (1.8.5, single-file iPadOS Safari transpilation). From 4.1.0 the script no longer carries upstream credits or license texts; the lineage note lives here.
 - [BewlyBewly](https://github.com/BewlyBewly/BewlyBewly) — the origin of the redesign language and interaction patterns, MIT, archived (last release v0.41.1).
 - [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) — componentization inspiration only; no code from it is included and no license claim is made about it.
 - Everyone who left B-station script notes on Greasy Fork.
@@ -210,4 +211,4 @@ A personal, self-use browsing-experience script, unrelated to Bilibili officiall
 
 ## License
 
-[MIT](LICENSE). Portions derived from MIT projects retain their original copyright notices. The embedded third-party license manifest (29 packages) ships with the script; see the LICENSE / CREDITS block at the end of the file.
+[MIT](LICENSE). The script itself no longer embeds a third-party license manifest — since 4.1.0 the tail of the script keeps only the Ibili identity and repository URL; for lineage history see the Credits above and this repository's commit history.

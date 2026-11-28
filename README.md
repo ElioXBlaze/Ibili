@@ -6,7 +6,7 @@
 
 中文　·　**[English →](README.en.md)**　·　作者 **Xi/ElioXBlaze**　·　QQ 群 **1134860332**
 
-**当前版本 4.0.7** · MIT License · 单文件用户脚本
+**当前版本 4.1.0** · MIT License · 单文件用户脚本
 
 </div>
 
@@ -185,6 +185,7 @@ __BP_I18N_AUDIT__()                // 遍历全页，列出仍未覆盖的可见
 
 完整发布记录见 [Releases](https://github.com/ElioXBlaze/Ibili/releases)。3.x 是融合、设置并入、多语言、触控与真机结构修复阶段；4.0 起换核 BewlyCat。要点：
 
+- **4.1.0** — **纯 Ibili**：版本与名字全局同步到唯一真值源 `__IBILI_VER__`，诊断详情恢复；脚本内品牌、标识、console 前缀、`current_contributors` 全部收敛为 Ibili（by Xi/ElioXBlaze）；脚本尾部的第三方鸣谢、名单与证书文本按作者口径移除，本脚本只属于 Ibili。
 - **4.0.7** — 版本真值源统一：全脚本版本号收敛到单一 `__IBILI_VER__`（发版只改一处，显示 / 记账 / 备份自动同步）；版本提醒弹窗去 Release 化、全窗元素居中；使用帮助栏删除，备份恢复唯一入口在关于页。
 - **4.0.6** — 正式版（三批可证修复收编）：Stay 菜单注册根治、导出自动枚举全部存储键、起播手势收口、关于页打赏图补回。
 - **4.0.5** — 设置页 UI 叠层根治：九个旧注入函数在 V5 生效时短路；删除 bewlycat 遗留设置入口与右下角双图标；设置窗口只保留一个搜索框，搜索结果走真实 IA 路径；14 个二级页强制可见，面包屑统一「一级 › 二级」；中央手势 HUD 删除，只留左亮度 / 右音量竖条；「工程」设置页删除，工程入口只留在 Stay 用户脚本菜单。
@@ -204,7 +205,7 @@ QQ 群 **1134860332**（插件反馈）。群邀请链接可能过期，搜群�
 
 ## 致谢
 
-- [BewlyCat](https://github.com/keleus/BewlyCat) — 本文件 UI 运行时的直接来源（1.8.5，iPadOS Safari 单文件转译）。上游声明由 MIT 许可在原项目基础上开发；上游明确不打包 Safari、不做大量 Safari only 适配，本文件为第三方自行适配。
+- [BewlyCat](https://github.com/keleus/BewlyCat) — 4.0 换核时 UI 运行时的直接来源（1.8.5，iPadOS Safari 单文件转译）。4.1.0 起脚本内不再保留上游鸣谢与许可文本，此处保留血统说明。
 - [BewlyBewly](https://github.com/BewlyBewly/BewlyBewly) — 页面美化与交互范式的祖源，MIT，已归档停更（末版 v0.41.1）。
 - [Bilibili-Evolved](https://github.com/the1812/Bilibili-Evolved) — 组件化思路；本项目只借鉴思路，不包含其代码，也不沿用其许可表述。
 - 以及所有在 Greasy Fork 上留下踩坑记录的 B 站脚本作者。
@@ -217,4 +218,4 @@ QQ 群 **1134860332**（插件反馈）。群邀请链接可能过期，搜群�
 
 ## 许可
 
-[MIT](LICENSE)。源自 MIT 项目的部分保留其原版权声明，内嵌的第三方包许可清单（29 个包）随脚本一并保留，见脚本尾部 LICENSE / CREDITS 注释块。
+[MIT](LICENSE)。脚本内部不再内嵌第三方许可清单——4.1.0 起脚本尾部仅保留 Ibili 标识与仓库地址，历史血统说明见上方致谢与本仓库提交历史。
