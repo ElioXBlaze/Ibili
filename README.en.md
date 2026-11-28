@@ -20,7 +20,7 @@ Version 4.0 completed a full core swap: the UI runtime now runs on a **single-fi
 
 | | | |
 |---|---|---|
-| **41** speed steps, 0.0312×–32× | **11** UI languages | **14** shortcuts |
+| **41** speed steps, 0.0312×–32× | **11** UI languages | **30** shortcuts |
 | **No system fullscreen**, danmaku intact | **1 file**, no build, no deps | **0** telemetry |
 
 Settings are not a floating panel — they **live inside the site's own settings window**, with a search box that finds every setting. Videos you dislike disappear in one tap. Videos you want are always within reach.
@@ -91,19 +91,25 @@ Metadata: `@run-at document-start`, 11 `@match` patterns (search / messages / sp
 
 ## Shortcut reference
 
-14 factory defaults, all editable in Settings → Key mapping, plus a "Shortcut exclusivity" switch (window capture + `stopImmediatePropagation`, so other scripts on the page cannot fire on the same key).
+**30** factory defaults, all editable in Settings → Shortcut remapping, plus a "Shortcut exclusivity" switch (window capture + `stopImmediatePropagation`, so other scripts on the page cannot fire on the same key); the 22 official player actions are folded into the same key system — remapping, conflict overview and one-tap avoidance share a single source of truth.
 
 | Key | Action | Key | Action |
 |---|---|---|---|
-| `b` | One-tap triple | `d` | Danmaku toggle |
-| `f` | Bilibili web fullscreen | `q` | Mini / PiP window |
-| `r` | Refresh feed | `j` | Frame capture |
-| `m` | Mute | `-` / `=` | Speed down / up |
-| `s` | Native search box toggle | `Shift+S` | Zero-nav search overlay |
-| `Shift+F` | Picture fill toggle | `Shift+R` | Fill reset |
-| `g` | Study Mode | | |
+| `Space` | Play / pause | `←` / `→` | Seek back / forward |
+| `↑` / `↓` | Volume up / down | `m` | Mute |
+| `-` / `=` | Previous / next part | `,` | Refresh feed |
+| `f` | Web fullscreen | `Shift+F` | Picture fill toggle |
+| `Shift+R` | Fill reset | `t` | Wide mode |
+| `[` / `]` | Speed down / up one step | `Shift+!` / `Shift+@` | Speed preset 1 / 2 |
+| `d` | Danmaku toggle | `i` | Danmaku input / preset |
+| `s` | Native search | `Shift+S` | Zero-nav search overlay |
+| `b` | One-tap triple (confirm / fallback) | `r` | One-tap triple (official action) |
+| `q` | Like | `w` | Coin |
+| `e` | Favorite | `g` | Follow |
+| `c` | Frame capture | `p` | Mini / PiP window |
+| `;` | Study Mode | | |
 
-`s` silently drops the cursor into the **currently visible large search bar** in Search Page Mode (no toast at all); on ordinary pages it hands off to Bilibili's native search completely — Enter is not intercepted and no overlay pops up. The `Shift+S` overlay carries suggestions, hot searches and category navigation with zero navigation.
+The `Shift+S` overlay carries suggestions, hot searches and category navigation with zero navigation; `s` hands the cursor to Bilibili's own search box. Triple-tap fullscreen, keyboard volume bar and smooth brightness each have a one-tap switch under "Gestures / Playback & volume", and the smooth mode can revert to the legacy feel at any time.
 
 ---
 
@@ -178,6 +184,10 @@ The hard parts were all iPad Safari specifics:
 
 Full history: [Releases](https://github.com/ElioXBlaze/Ibili/releases). 3.x covered the merge, settings integration, languages, touch and on-device structural fixes; 4.0 swapped the core to BewlyCat. Highlights:
 
+- **4.1.4** — **keyboard system convergence**: 22 official player actions folded into Ibili commands sharing one source of truth with native keys; conflict overview + one-tap avoidance, key guard (BP_KEY414) prevents double-firing; the two search-page switches merged into their feature card; factory defaults taken from a user-confirmed export snapshot.
+- **4.1.3** — settings pages homed: the danmaku page keeps only danmaku items, 10 danmaku presets merged into card 0; triple-tap fullscreen / keyboard volume bar / smooth brightness moved to "Gestures" and "Playback & volume".
+- **4.1.2** — danmaku presets / triple-tap fullscreen / keyboard volume bar / auto-pause added; smooth brightness: same-frame merged writes + removal of the 0.01 quantization ladder, with a switch to revert.
+- **4.1.1** — portrait adaptation: portrait orientation renders "video width = screen width" with letterboxing top/bottom, no longer judged by landscape ratio alone.
 - **4.1.0** — **purely Ibili**: version and naming globally synced to the single `__IBILI_VER__` source of truth, diagnostics detail restored; branding, identity, console prefixes and `current_contributors` all consolidated to Ibili (by Xi/ElioXBlaze); third-party credits, manifests and license texts at the tail of the script were removed by author decision — the script belongs to Ibili alone.
 - **4.0.7** — unified version source of truth: every version readout now derives from a single `__IBILI_VER__` (one line per release; display, bookkeeping and backups sync automatically); the version-reminder dialog drops its Release-style layout and centers all elements; the help bar is removed — backup/restore lives only on the About page.
 - **4.0.6** — official release (three batches of verifiable fixes folded in): Stay menu registration root-fixed, export auto-enumerates all storage keys, autoplay gesture finalized, About-page donation images restored.
